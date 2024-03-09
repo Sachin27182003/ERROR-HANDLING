@@ -21,8 +21,8 @@ function processPayment(amount, cardNumber, expirationDate) {
         throw new Error("Invalid payment amount");
     }
 
-    if(cardNumber.length == 20){
-        throw new Error("Try This Format xxxx-xxxx-xxxx-xxxx") 
+    if(cardNumber.length !== 19){
+        throw new Error("Try This Format 1234-xxxx-xxxx-xxxx") 
     } else if(cardNumber < 20 || !cardNumber){
         throw new Error("Invalid card number");
     }
